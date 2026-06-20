@@ -83,7 +83,7 @@ class MarketcheckSource(Source):
             trim=str(dig(item, "build.trim", "trim", default="")),
             price=to_int(item.get("price")),
             miles=to_int(item.get("miles")),
-            title_clean=as_bool(item.get("carfax_clean_title")),
+            title_clean=True if as_bool(item.get("carfax_clean_title")) is True else None,  # 0 = no data, not "not clean"
             certified=certified,
             one_owner=as_bool(item.get("carfax_1_owner")),
             dist_miles=to_float(item.get("dist")),
