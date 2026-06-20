@@ -1,0 +1,1 @@
+"""Cybertruck market tracker package."""

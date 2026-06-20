@@ -1,0 +1,76 @@
+name: Cybertruck Daily Tracker
+
+on:
+  schedule:
+    # GitHub cron is UTC and does NOT adjust for daylight saving. We fire at
+    # both 15:00 and 16:00 UTC; the run.py --require-hour guard lets exactly one
+    # of them proceed at 08:00 America/Los_Angeles year-round.
+    - cron: "0 15 * * *"   # 08:00 PDT (summer)
+    - cron: "0 16 * * *"   # 08:00 PST (winter)
+  workflow_dispatch:
+    inputs:
+      force:
+        description: "Run now, ignoring the 8 AM guard"
+        type: boolean
+        default: true
+      dry_run:
+        description: "Build the report but do NOT send email"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write          # allow committing daily snapshots + history back
+
+concurrency:
+  group: cybertruck-tracker
+  cancel-in-progress: false
+
+jobs:
+  track:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run tracker
+        env:
+          PROVIDER: ${{ vars.PROVIDER || 'marketcheck' }}
+          MARKETCHECK_API_KEY: ${{ secrets.MARKETCHECK_API_KEY }}
+          AUTODEV_API_KEY: ${{ secrets.AUTODEV_API_KEY }}
+          GMAIL_USER: ${{ secrets.GMAIL_USER }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          EMAIL_TO: ${{ vars.EMAIL_TO || 'tommcveigh@yahoo.com' }}
+          PRICE_MAX: ${{ vars.PRICE_MAX || '70000' }}
+          SEARCH_RADIUS_MILES: ${{ vars.SEARCH_RADIUS_MILES || '3000' }}
+          MAX_MILES: ${{ vars.MAX_MILES || '' }}
+          EVENT_NAME: ${{ github.event_name }}
+          FORCE: ${{ inputs.force }}
+          DRY_RUN: ${{ inputs.dry_run }}
+        run: |
+          ARGS=""
+          if [ "$EVENT_NAME" = "schedule" ]; then
+            ARGS="--require-hour 8 --tz America/Los_Angeles"
+          else
+            if [ "$FORCE" != "true" ]; then ARGS="--require-hour 8 --tz America/Los_Angeles"; fi
+            if [ "$DRY_RUN" = "true" ]; then ARGS="$ARGS --dry-run"; fi
+          fi
+          echo "Running: python run.py $ARGS"
+          python run.py $ARGS
+
+      - name: Commit snapshot + price history
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/
+          if git diff --cached --quiet; then
+            echo "No data changes to commit."
+          else
+            git commit -m "chore: daily Cybertruck snapshot $(date -u +%F)"
+            git push
+          fi

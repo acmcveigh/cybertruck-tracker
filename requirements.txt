@@ -1,0 +1,6 @@
+requests>=2.31
+python-dotenv>=1.0
+tzdata>=2024.1
+# Optional: offline ZIP -> lat/long so distance still works if a listing
+# arrives without one. Pulls in pandas/numpy. Uncomment to enable.
+# pgeocode>=0.4

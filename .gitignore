@@ -1,0 +1,11 @@
+# Secrets — never commit these
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Generated report (snapshots + history.json ARE committed for price history)
+data/last_report.html
