@@ -63,10 +63,19 @@ def main() -> int:
     source = build_source()
     raw = source.fetch()
     print(f"  pulled {len(raw)} raw listings")
+    if raw:
+        sample = raw[0]
+        print(f"  sample: {sample.year} {sample.make} {sample.model} ${sample.price} VIN={sample.vin}")
+    else:
+        print("  WARNING: 0 listings returned from API — check API key plan and model name spelling")
 
     ensure_distance(raw)
     ranked = filters.filter_and_rank(raw)
     print(f"  {len(ranked)} pass filters (<= ${config.PRICE_MAX:,}, clean/undamaged)")
+    if raw and not ranked:
+        for l in raw[:5]:
+            ok, reason = filters.passes(l)
+            print(f"  filtered out: {l.year} {l.make} {l.model} ${l.price} — {reason}")
 
     store.save_snapshot(ranked, today)
     diff = store.update_history(ranked, today)

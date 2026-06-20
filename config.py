@@ -56,7 +56,7 @@ MODEL = os.getenv("MODEL", "Cybertruck")
 PRICE_MAX = _int("PRICE_MAX", 70000)
 MAX_MILES = _int("MAX_MILES", 0)          # 0 = no mileage cap
 REQUIRE_CLEAN_TITLE = _bool("REQUIRE_CLEAN_TITLE", True)
-CAR_TYPES = [t.strip() for t in os.getenv("CAR_TYPES", "used,certified").split(",") if t.strip()]
+CAR_TYPES = [t.strip() for t in os.getenv("CAR_TYPES", "used,certified,new").split(",") if t.strip()]
 
 # Damage / branded-title keywords -> exclude the listing.
 EXCLUDE_KEYWORDS = [
