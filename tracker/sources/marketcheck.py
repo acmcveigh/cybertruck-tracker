@@ -32,20 +32,20 @@ class MarketcheckSource(Source):
         self.session = requests.Session()
 
     def _params(self, car_type: str, start: int) -> dict:
-        return {
+        params = {
             "api_key": self.api_key,
             "make": config.MAKE,
             "model": config.MODEL,
             "car_type": car_type,
             "price_range": f"0-{config.PRICE_MAX}",
-            "latitude": config.HOME_LAT,
-            "longitude": config.HOME_LON,
+            "zip": config.HOME_ZIP,
             "radius": config.SEARCH_RADIUS_MILES,
             "rows": 50,
             "start": start,
-            "sort_by": "dist",
+            "sort_by": "price",
             "sort_order": "asc",
         }
+        return params
 
     def _map(self, item: dict, car_type: str) -> Listing:
         dealer = item.get("dealer") or {}
@@ -90,6 +90,12 @@ class MarketcheckSource(Source):
                 if resp.status_code == 401:
                     raise RuntimeError(
                         "Marketcheck rejected the API key (401). Check MARKETCHECK_API_KEY."
+                    )
+                if resp.status_code == 422:
+                    raise RuntimeError(
+                        f"Marketcheck returned 422 (invalid request). "
+                        f"Check that your API key is fully activated and has search access. "
+                        f"Response: {resp.text[:500]}"
                     )
                 if resp.status_code == 429:
                     raise RuntimeError(
