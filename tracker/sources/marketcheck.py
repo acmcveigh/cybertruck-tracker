@@ -38,7 +38,7 @@ SEARCH_ZIPS = [
     "28201",  # Charlotte, NC
     "19101",  # Philadelphia, PA
     "10001",  # New York, NY
-    "02101",  # Boston, MA
+    "02108",  # Boston, MA
 ]
 
 
@@ -109,11 +109,8 @@ class MarketcheckSource(Source):
                     "Marketcheck rejected the API key (401). Check MARKETCHECK_API_KEY."
                 )
             if resp.status_code == 422:
-                raise RuntimeError(
-                    f"Marketcheck returned 422 (invalid request). "
-                    f"Check that your API key is fully activated and has search access. "
-                    f"Response: {resp.text[:500]}"
-                )
+                print(f"  skipping zip {zip_code}: {resp.text[:200]}")
+                return
             if resp.status_code == 429:
                 raise RuntimeError(
                     "Marketcheck rate limit hit (429). You may be out of free-tier calls."
