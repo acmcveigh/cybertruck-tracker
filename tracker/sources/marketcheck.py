@@ -21,6 +21,26 @@ from tracker.util import as_bool, dig, first_in, to_float, to_int
 
 API_URL = "https://api.marketcheck.com/v2/search/car/active"
 
+# Major metro ZIP codes spread across the US so 100-mile radius covers the country.
+SEARCH_ZIPS = [
+    "97488",  # Vida, OR (home)
+    "98101",  # Seattle, WA
+    "94102",  # San Francisco, CA
+    "90001",  # Los Angeles, CA
+    "85001",  # Phoenix, AZ
+    "80201",  # Denver, CO
+    "75201",  # Dallas, TX
+    "77001",  # Houston, TX
+    "60601",  # Chicago, IL
+    "55401",  # Minneapolis, MN
+    "30301",  # Atlanta, GA
+    "33101",  # Miami, FL
+    "28201",  # Charlotte, NC
+    "19101",  # Philadelphia, PA
+    "10001",  # New York, NY
+    "02101",  # Boston, MA
+]
+
 
 class MarketcheckSource(Source):
     name = "marketcheck"
@@ -31,21 +51,20 @@ class MarketcheckSource(Source):
         self.api_key = api_key
         self.session = requests.Session()
 
-    def _params(self, car_type: str, start: int) -> dict:
-        params = {
+    def _params(self, car_type: str, zip_code: str, start: int) -> dict:
+        return {
             "api_key": self.api_key,
             "make": config.MAKE,
             "model": config.MODEL,
             "car_type": car_type,
             "price_range": f"0-{config.PRICE_MAX}",
-            "zip": config.HOME_ZIP,
-            "radius": config.SEARCH_RADIUS_MILES,
+            "zip": zip_code,
+            "radius": 100,   # free tier max
             "rows": 50,
             "start": start,
             "sort_by": "price",
             "sort_order": "asc",
         }
-        return params
 
     def _map(self, item: dict, car_type: str) -> Listing:
         dealer = item.get("dealer") or {}
@@ -80,38 +99,44 @@ class MarketcheckSource(Source):
             comments=comments,
         )
 
+    def _fetch_zip(self, car_type: str, zip_code: str, out: dict) -> None:
+        start = 0
+        while len(out) < config.MAX_LISTINGS:
+            params = self._params(car_type, zip_code, start)
+            resp = self.session.get(API_URL, params=params, timeout=30)
+            if resp.status_code == 401:
+                raise RuntimeError(
+                    "Marketcheck rejected the API key (401). Check MARKETCHECK_API_KEY."
+                )
+            if resp.status_code == 422:
+                raise RuntimeError(
+                    f"Marketcheck returned 422 (invalid request). "
+                    f"Check that your API key is fully activated and has search access. "
+                    f"Response: {resp.text[:500]}"
+                )
+            if resp.status_code == 429:
+                raise RuntimeError(
+                    "Marketcheck rate limit hit (429). You may be out of free-tier calls."
+                )
+            resp.raise_for_status()
+            data = resp.json()
+            listings = data.get("listings") or []
+            if not listings:
+                break
+            for item in listings:
+                lst = self._map(item, car_type)
+                out[lst.key] = lst  # de-dupe by VIN across zips and car_types
+            num_found = int(data.get("num_found") or 0)
+            start += len(listings)
+            if start >= num_found or len(listings) < params["rows"]:
+                break
+            time.sleep(0.3)  # be polite to the API
+
     def fetch(self) -> list[Listing]:
         out: dict[str, Listing] = {}
         for car_type in config.CAR_TYPES:
-            start = 0
-            while len(out) < config.MAX_LISTINGS:
-                params = self._params(car_type, start)
-                resp = self.session.get(API_URL, params=params, timeout=30)
-                if resp.status_code == 401:
-                    raise RuntimeError(
-                        "Marketcheck rejected the API key (401). Check MARKETCHECK_API_KEY."
-                    )
-                if resp.status_code == 422:
-                    raise RuntimeError(
-                        f"Marketcheck returned 422 (invalid request). "
-                        f"Check that your API key is fully activated and has search access. "
-                        f"Response: {resp.text[:500]}"
-                    )
-                if resp.status_code == 429:
-                    raise RuntimeError(
-                        "Marketcheck rate limit hit (429). You may be out of free-tier calls."
-                    )
-                resp.raise_for_status()
-                data = resp.json()
-                listings = data.get("listings") or []
-                if not listings:
-                    break
-                for item in listings:
-                    lst = self._map(item, car_type)
-                    out[lst.key] = lst  # de-dupe by VIN across car_types
-                num_found = int(data.get("num_found") or 0)
-                start += len(listings)
-                if start >= num_found or len(listings) < params["rows"]:
-                    break
-                time.sleep(0.3)  # be polite to the API
+            for zip_code in SEARCH_ZIPS:
+                print(f"  searching zip {zip_code} ({car_type}) ...")
+                self._fetch_zip(car_type, zip_code, out)
+                time.sleep(0.5)
         return list(out.values())

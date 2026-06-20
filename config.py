@@ -70,7 +70,7 @@ EXCLUDE_KEYWORDS = [
 HOME_ZIP = os.getenv("HOME_ZIP", "97488")
 HOME_LAT = _float("HOME_LAT", 44.1460)
 HOME_LON = _float("HOME_LON", -122.5698)
-SEARCH_RADIUS_MILES = _int("SEARCH_RADIUS_MILES", 3000)  # ~covers continental US
+SEARCH_RADIUS_MILES = _int("SEARCH_RADIUS_MILES", 100)  # free tier capped at 100 miles
 
 # --- Ranking weights (higher score = better deal) ---
 WEIGHT_PRICE = _float("WEIGHT_PRICE", 1.0)
