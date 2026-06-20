@@ -62,6 +62,18 @@ def main() -> int:
     print(f"Fetching {config.MAKE} {config.MODEL} listings via {config.PROVIDER} ...")
     source = build_source()
     raw = source.fetch()
+
+    # Always pull Carvana in parallel (they deliver nationwide, no API key needed)
+    try:
+        from tracker.sources.carvana import CarvanaSource
+        print("Fetching Carvana listings ...")
+        carvana_listings = CarvanaSource().fetch()
+        # Merge; Marketcheck VINs take precedence (more metadata)
+        carvana_new = {l.key: l for l in carvana_listings if l.key not in {r.key for r in raw}}
+        raw = raw + list(carvana_new.values())
+        print(f"  combined total: {len(raw)} raw listings")
+    except Exception as e:
+        print(f"  Carvana fetch failed (non-fatal): {e}")
     print(f"  pulled {len(raw)} raw listings")
     if raw:
         sample = raw[0]
