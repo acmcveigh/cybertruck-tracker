@@ -1,4 +1,4 @@
-name: Cybertruck Daily Tracker
+name: "Cybertruck Daily Tracker"
 
 on:
   schedule:
