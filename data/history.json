@@ -23,7 +23,7 @@
     "first_seen": "2026-06-20",
     "key": "7G2CEHED0RA001151",
     "last_price": 69797,
-    "last_seen": "2026-07-19",
+    "last_seen": "2026-07-26",
     "lowest_price": 67797,
     "price_history": [
       {
@@ -58,7 +58,7 @@
     "vin": "7G2CEHED0RA011128"
   },
   "7G2CEHED0RA016281": {
-    "currently_listed": true,
+    "currently_listed": false,
     "first_price": 53000,
     "first_seen": "2026-07-04",
     "key": "7G2CEHED0RA016281",
@@ -81,7 +81,7 @@
     "first_seen": "2026-06-20",
     "key": "7G2CEHED0RA023652",
     "last_price": 67996,
-    "last_seen": "2026-07-19",
+    "last_seen": "2026-07-26",
     "lowest_price": 65996,
     "price_history": [
       {
@@ -97,13 +97,31 @@
     "url": "https://www.premiumautosinc.com/inventory/used-2024-tesla-cybertruck-foundation-series-7g2cehed0ra023652-in-norco-el-monte-ca",
     "vin": "7G2CEHED0RA023652"
   },
+  "7G2CEHED2RA001829": {
+    "currently_listed": true,
+    "first_price": 69490,
+    "first_seen": "2026-07-26",
+    "key": "7G2CEHED2RA001829",
+    "last_price": 69490,
+    "last_seen": "2026-07-26",
+    "lowest_price": 69490,
+    "price_history": [
+      {
+        "date": "2026-07-26",
+        "price": 69490
+      }
+    ],
+    "title": "2024 Tesla Cybertruck Base",
+    "url": "https://www.markkia.com/viewdetails/used/7g2cehed2ra001829/2024-tesla-cybertruck-?type=finance",
+    "vin": "7G2CEHED2RA001829"
+  },
   "7G2CEHED2RA050867": {
     "currently_listed": true,
     "first_price": 69998,
     "first_seen": "2026-07-19",
     "key": "7G2CEHED2RA050867",
     "last_price": 69998,
-    "last_seen": "2026-07-19",
+    "last_seen": "2026-07-26",
     "lowest_price": 69998,
     "price_history": [
       {
@@ -121,7 +139,7 @@
     "first_seen": "2026-07-19",
     "key": "7G2CEHED3RA002312",
     "last_price": 69997,
-    "last_seen": "2026-07-19",
+    "last_seen": "2026-07-26",
     "lowest_price": 69997,
     "price_history": [
       {
@@ -134,7 +152,7 @@
     "vin": "7G2CEHED3RA002312"
   },
   "7G2CEHED3RA016789": {
-    "currently_listed": true,
+    "currently_listed": false,
     "first_price": 69992,
     "first_seen": "2026-07-11",
     "key": "7G2CEHED3RA016789",
@@ -161,7 +179,7 @@
     "first_seen": "2026-07-11",
     "key": "7G2CEHED3RA032202",
     "last_price": 68798,
-    "last_seen": "2026-07-19",
+    "last_seen": "2026-07-26",
     "lowest_price": 68798,
     "price_history": [
       {
@@ -177,13 +195,31 @@
     "url": "https://carvision.com/inventory/Used-2024-Tesla-Cybertruck--7G2CEHED3RA032202",
     "vin": "7G2CEHED3RA032202"
   },
+  "7G2CEHED3RA050957": {
+    "currently_listed": true,
+    "first_price": 63998,
+    "first_seen": "2026-07-26",
+    "key": "7G2CEHED3RA050957",
+    "last_price": 63998,
+    "last_seen": "2026-07-26",
+    "lowest_price": 63998,
+    "price_history": [
+      {
+        "date": "2026-07-26",
+        "price": 63998
+      }
+    ],
+    "title": "2024 Tesla Cybertruck Base",
+    "url": "https://www.carmax.com/car/70077424",
+    "vin": "7G2CEHED3RA050957"
+  },
   "7G2CEHED3SA075878": {
     "currently_listed": true,
     "first_price": 57996,
     "first_seen": "2026-06-20",
     "key": "7G2CEHED3SA075878",
     "last_price": 59996,
-    "last_seen": "2026-07-19",
+    "last_seen": "2026-07-26",
     "lowest_price": 57996,
     "price_history": [
       {
@@ -205,7 +241,7 @@
     "first_seen": "2026-07-18",
     "key": "7G2CEHED4RA002108",
     "last_price": 69999,
-    "last_seen": "2026-07-19",
+    "last_seen": "2026-07-26",
     "lowest_price": 69999,
     "price_history": [
       {
@@ -222,13 +258,17 @@
     "first_price": 59998,
     "first_seen": "2026-07-04",
     "key": "7G2CEHED4RA048571",
-    "last_price": 59998,
-    "last_seen": "2026-07-19",
-    "lowest_price": 59998,
+    "last_price": 54899,
+    "last_seen": "2026-07-26",
+    "lowest_price": 54899,
     "price_history": [
       {
         "date": "2026-07-04",
         "price": 59998
+      },
+      {
+        "date": "2026-07-26",
+        "price": 54899
       }
     ],
     "title": "2024 Tesla Cybertruck Base",
@@ -240,17 +280,21 @@
     "first_price": 68000,
     "first_seen": "2026-07-11",
     "key": "7G2CEHED4RA049297",
-    "last_price": 68000,
-    "last_seen": "2026-07-19",
-    "lowest_price": 68000,
+    "last_price": 65000,
+    "last_seen": "2026-07-26",
+    "lowest_price": 65000,
     "price_history": [
       {
         "date": "2026-07-11",
         "price": 68000
+      },
+      {
+        "date": "2026-07-26",
+        "price": 65000
       }
     ],
     "title": "2024 Tesla Cybertruck Base",
-    "url": "https://www.duckysautosales.net/Inventory/Details/2e539404-df61-4d6e-a43a-c6a3fe12e67d",
+    "url": "https://www.duckysautosales.com/inventory/tesla/cybertruck/049297/",
     "vin": "7G2CEHED4RA049297"
   },
   "7G2CEHED5RA001629": {
@@ -259,7 +303,7 @@
     "first_seen": "2026-07-11",
     "key": "7G2CEHED5RA001629",
     "last_price": 69000,
-    "last_seen": "2026-07-19",
+    "last_seen": "2026-07-26",
     "lowest_price": 69000,
     "price_history": [
       {
@@ -271,23 +315,63 @@
     "url": "https://www.evsaints.com/vehicle-details/2024-tesla-cybertruck-foundation--finance-available-truck-59523aba8f4d204788428fb7ee583ff6",
     "vin": "7G2CEHED5RA001629"
   },
+  "7G2CEHED5RA014672": {
+    "currently_listed": true,
+    "first_price": 68950,
+    "first_seen": "2026-07-26",
+    "key": "7G2CEHED5RA014672",
+    "last_price": 68950,
+    "last_seen": "2026-07-26",
+    "lowest_price": 68950,
+    "price_history": [
+      {
+        "date": "2026-07-26",
+        "price": 68950
+      }
+    ],
+    "title": "2024 Tesla Cybertruck Base",
+    "url": "https://www.alsboumotorsriverside.com/used-cars-TESLA-CYBERTRUCK-2024-014672-RLLNWWWR",
+    "vin": "7G2CEHED5RA014672"
+  },
   "7G2CEHED5RA034355": {
     "currently_listed": true,
     "first_price": 59499,
     "first_seen": "2026-07-04",
     "key": "7G2CEHED5RA034355",
-    "last_price": 59499,
-    "last_seen": "2026-07-19",
-    "lowest_price": 59499,
+    "last_price": 54499,
+    "last_seen": "2026-07-26",
+    "lowest_price": 54499,
     "price_history": [
       {
         "date": "2026-07-04",
         "price": 59499
+      },
+      {
+        "date": "2026-07-26",
+        "price": 54499
       }
     ],
     "title": "2024 Tesla Cybertruck Base",
     "url": "https://www.duckysautosales.com/inventory/tesla/cybertruck/034355/",
     "vin": "7G2CEHED5RA034355"
+  },
+  "7G2CEHED5RA051382": {
+    "currently_listed": true,
+    "first_price": 59999,
+    "first_seen": "2026-07-26",
+    "key": "7G2CEHED5RA051382",
+    "last_price": 59999,
+    "last_seen": "2026-07-26",
+    "lowest_price": 59999,
+    "price_history": [
+      {
+        "date": "2026-07-26",
+        "price": 59999
+      }
+    ],
+    "title": "2024 Tesla Cybertruck Base",
+    "url": "https://www.premierauto.org/inventory/tesla/cybertruck/051382/",
+    "vin": "7G2CEHED5RA051382"
   },
   "7G2CEHED6RA014650": {
     "currently_listed": false,
@@ -331,7 +415,7 @@
     "first_seen": "2026-06-20",
     "key": "7G2CEHED7RA001681",
     "last_price": 63999,
-    "last_seen": "2026-07-19",
+    "last_seen": "2026-07-26",
     "lowest_price": 56999,
     "price_history": [
       {
@@ -371,7 +455,7 @@
     "first_seen": "2026-06-20",
     "key": "7G2CEHED8RA002354",
     "last_price": 67995,
-    "last_seen": "2026-07-19",
+    "last_seen": "2026-07-26",
     "lowest_price": 67995,
     "price_history": [
       {
@@ -388,18 +472,40 @@
     "first_price": 65495,
     "first_seen": "2026-07-04",
     "key": "7G2CEHED8RA006999",
-    "last_price": 65495,
-    "last_seen": "2026-07-19",
-    "lowest_price": 65495,
+    "last_price": 64995,
+    "last_seen": "2026-07-26",
+    "lowest_price": 64995,
     "price_history": [
       {
         "date": "2026-07-04",
         "price": 65495
+      },
+      {
+        "date": "2026-07-26",
+        "price": 64995
       }
     ],
     "title": "2024 Tesla Cybertruck Base",
     "url": "https://www.automotiveavenuesnj.com/inventory/used-2024-tesla-cybertruck-awd-w-foundation-series-package-powershare-awd-truck-7g2cehed8ra006999/",
     "vin": "7G2CEHED8RA006999"
+  },
+  "7G2CEHED8RA017078": {
+    "currently_listed": true,
+    "first_price": 68956,
+    "first_seen": "2026-07-26",
+    "key": "7G2CEHED8RA017078",
+    "last_price": 68956,
+    "last_seen": "2026-07-26",
+    "lowest_price": 68956,
+    "price_history": [
+      {
+        "date": "2026-07-26",
+        "price": 68956
+      }
+    ],
+    "title": "2024 Tesla Cybertruck Base",
+    "url": "http://www.drivenauto.net/details-2024-tesla-cybertruck-awd-used-7g2cehed8ra017078.html",
+    "vin": "7G2CEHED8RA017078"
   },
   "7G2CEHED8RA040442": {
     "currently_listed": true,
@@ -407,7 +513,7 @@
     "first_seen": "2026-07-19",
     "key": "7G2CEHED8RA040442",
     "last_price": 68991,
-    "last_seen": "2026-07-19",
+    "last_seen": "2026-07-26",
     "lowest_price": 68991,
     "price_history": [
       {
@@ -425,7 +531,7 @@
     "first_seen": "2026-07-04",
     "key": "7G2CEHED9RA000998",
     "last_price": 67989,
-    "last_seen": "2026-07-19",
+    "last_seen": "2026-07-26",
     "lowest_price": 67989,
     "price_history": [
       {
@@ -447,7 +553,7 @@
     "first_seen": "2026-06-20",
     "key": "7G2CEHED9RA001150",
     "last_price": 66995,
-    "last_seen": "2026-07-19",
+    "last_seen": "2026-07-26",
     "lowest_price": 66995,
     "price_history": [
       {
@@ -465,7 +571,7 @@
     "first_seen": "2026-07-04",
     "key": "7G2CEHED9RA001942",
     "last_price": 68500,
-    "last_seen": "2026-07-19",
+    "last_seen": "2026-07-26",
     "lowest_price": 67000,
     "price_history": [
       {
@@ -540,13 +646,17 @@
     "first_price": 69872,
     "first_seen": "2026-07-18",
     "key": "7G2CEHEDXRA040202",
-    "last_price": 69872,
-    "last_seen": "2026-07-19",
-    "lowest_price": 69872,
+    "last_price": 69572,
+    "last_seen": "2026-07-26",
+    "lowest_price": 69572,
     "price_history": [
       {
         "date": "2026-07-18",
         "price": 69872
+      },
+      {
+        "date": "2026-07-26",
+        "price": 69572
       }
     ],
     "title": "2024 Tesla Cybertruck Base",
@@ -559,7 +669,7 @@
     "first_seen": "2026-06-20",
     "key": "7G2CEHEDXSA077403",
     "last_price": 64900,
-    "last_seen": "2026-07-19",
+    "last_seen": "2026-07-26",
     "lowest_price": 64900,
     "price_history": [
       {
@@ -577,7 +687,7 @@
     "first_seen": "2026-07-18",
     "key": "7G2CEHEE0RA033140",
     "last_price": 69999,
-    "last_seen": "2026-07-19",
+    "last_seen": "2026-07-26",
     "lowest_price": 69999,
     "price_history": [
       {
@@ -590,7 +700,7 @@
     "vin": "7G2CEHEE0RA033140"
   },
   "7G2CEHEE4RA047686": {
-    "currently_listed": true,
+    "currently_listed": false,
     "first_price": 69999,
     "first_seen": "2026-07-18",
     "key": "7G2CEHEE4RA047686",
