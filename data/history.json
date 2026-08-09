@@ -23,7 +23,7 @@
     "first_seen": "2026-06-20",
     "key": "7G2CEHED0RA001151",
     "last_price": 69797,
-    "last_seen": "2026-08-08",
+    "last_seen": "2026-08-09",
     "lowest_price": 67797,
     "price_history": [
       {
@@ -81,7 +81,7 @@
     "first_seen": "2026-06-20",
     "key": "7G2CEHED0RA023652",
     "last_price": 67996,
-    "last_seen": "2026-08-08",
+    "last_seen": "2026-08-09",
     "lowest_price": 65996,
     "price_history": [
       {
@@ -103,7 +103,7 @@
     "first_seen": "2026-08-07",
     "key": "7G2CEHED0RA025417",
     "last_price": 68922,
-    "last_seen": "2026-08-08",
+    "last_seen": "2026-08-09",
     "lowest_price": 68922,
     "price_history": [
       {
@@ -161,7 +161,7 @@
     "first_seen": "2026-08-07",
     "key": "7G2CEHED2RA002723",
     "last_price": 69913,
-    "last_seen": "2026-08-08",
+    "last_seen": "2026-08-09",
     "lowest_price": 69913,
     "price_history": [
       {
@@ -179,7 +179,7 @@
     "first_seen": "2026-07-19",
     "key": "7G2CEHED2RA050867",
     "last_price": 69998,
-    "last_seen": "2026-08-08",
+    "last_seen": "2026-08-09",
     "lowest_price": 69998,
     "price_history": [
       {
@@ -237,7 +237,7 @@
     "first_seen": "2026-07-11",
     "key": "7G2CEHED3RA032202",
     "last_price": 66298,
-    "last_seen": "2026-08-08",
+    "last_seen": "2026-08-09",
     "lowest_price": 66298,
     "price_history": [
       {
@@ -267,7 +267,7 @@
     "first_seen": "2026-07-26",
     "key": "7G2CEHED3RA050957",
     "last_price": 63998,
-    "last_seen": "2026-08-08",
+    "last_seen": "2026-08-09",
     "lowest_price": 63998,
     "price_history": [
       {
@@ -285,7 +285,7 @@
     "first_seen": "2026-06-20",
     "key": "7G2CEHED3SA075878",
     "last_price": 59996,
-    "last_seen": "2026-08-08",
+    "last_seen": "2026-08-09",
     "lowest_price": 57996,
     "price_history": [
       {
@@ -307,7 +307,7 @@
     "first_seen": "2026-07-18",
     "key": "7G2CEHED4RA002108",
     "last_price": 69786,
-    "last_seen": "2026-08-08",
+    "last_seen": "2026-08-09",
     "lowest_price": 69400,
     "price_history": [
       {
@@ -355,7 +355,7 @@
     "first_seen": "2026-07-11",
     "key": "7G2CEHED4RA049297",
     "last_price": 65000,
-    "last_seen": "2026-08-08",
+    "last_seen": "2026-08-09",
     "lowest_price": 65000,
     "price_history": [
       {
@@ -377,7 +377,7 @@
     "first_seen": "2026-08-02",
     "key": "7G2CEHED4SA058605",
     "last_price": 69995,
-    "last_seen": "2026-08-08",
+    "last_seen": "2026-08-09",
     "lowest_price": 69995,
     "price_history": [
       {
@@ -395,7 +395,7 @@
     "first_seen": "2026-07-11",
     "key": "7G2CEHED5RA001629",
     "last_price": 69000,
-    "last_seen": "2026-08-08",
+    "last_seen": "2026-08-09",
     "lowest_price": 69000,
     "price_history": [
       {
@@ -413,7 +413,7 @@
     "first_seen": "2026-08-01",
     "key": "7G2CEHED5RA007222",
     "last_price": 68995,
-    "last_seen": "2026-08-08",
+    "last_seen": "2026-08-09",
     "lowest_price": 68995,
     "price_history": [
       {
@@ -431,7 +431,7 @@
     "first_seen": "2026-07-26",
     "key": "7G2CEHED5RA014672",
     "last_price": 68950,
-    "last_seen": "2026-08-08",
+    "last_seen": "2026-08-09",
     "lowest_price": 68950,
     "price_history": [
       {
@@ -471,7 +471,7 @@
     "first_seen": "2026-07-26",
     "key": "7G2CEHED5RA051382",
     "last_price": 57999,
-    "last_seen": "2026-08-08",
+    "last_seen": "2026-08-09",
     "lowest_price": 57999,
     "price_history": [
       {
@@ -568,13 +568,17 @@
     "first_price": 68956,
     "first_seen": "2026-08-07",
     "key": "7G2CEHED7RA030274",
-    "last_price": 68956,
-    "last_seen": "2026-08-08",
-    "lowest_price": 68956,
+    "last_price": 68357,
+    "last_seen": "2026-08-09",
+    "lowest_price": 68357,
     "price_history": [
       {
         "date": "2026-08-07",
         "price": 68956
+      },
+      {
+        "date": "2026-08-09",
+        "price": 68357
       }
     ],
     "title": "2024 Tesla Cybertruck Base",
@@ -587,7 +591,7 @@
     "first_seen": "2026-06-20",
     "key": "7G2CEHED8RA002354",
     "last_price": 67995,
-    "last_seen": "2026-08-08",
+    "last_seen": "2026-08-09",
     "lowest_price": 67995,
     "price_history": [
       {
@@ -605,7 +609,7 @@
     "first_seen": "2026-07-04",
     "key": "7G2CEHED8RA006999",
     "last_price": 64995,
-    "last_seen": "2026-08-08",
+    "last_seen": "2026-08-09",
     "lowest_price": 64995,
     "price_history": [
       {
@@ -685,7 +689,7 @@
     "first_seen": "2026-06-20",
     "key": "7G2CEHED9RA001150",
     "last_price": 66995,
-    "last_seen": "2026-08-08",
+    "last_seen": "2026-08-09",
     "lowest_price": 66995,
     "price_history": [
       {
@@ -694,7 +698,7 @@
       }
     ],
     "title": "2024 Tesla Cybertruck Base",
-    "url": "https://www.premiumautosinc.com/inventory/used-2024-tesla-cybertruck-foundation-series-full-self-driving-7g2cehed9ra001150-in-norco-el-monte-ca",
+    "url": "https://www.premiumautosinc.com/inventory/used-2024-tesla-cybertruck-7g2cehed9ra001150-in-norco-el-monte-ca",
     "vin": "7G2CEHED9RA001150"
   },
   "7G2CEHED9RA001259": {
@@ -703,7 +707,7 @@
     "first_seen": "2026-08-08",
     "key": "7G2CEHED9RA001259",
     "last_price": 68956,
-    "last_seen": "2026-08-08",
+    "last_seen": "2026-08-09",
     "lowest_price": 68956,
     "price_history": [
       {
@@ -721,7 +725,7 @@
     "first_seen": "2026-07-04",
     "key": "7G2CEHED9RA001942",
     "last_price": 68500,
-    "last_seen": "2026-08-08",
+    "last_seen": "2026-08-09",
     "lowest_price": 67000,
     "price_history": [
       {
@@ -797,7 +801,7 @@
     "first_seen": "2026-07-18",
     "key": "7G2CEHEDXRA040202",
     "last_price": 69372,
-    "last_seen": "2026-08-08",
+    "last_seen": "2026-08-09",
     "lowest_price": 69372,
     "price_history": [
       {
@@ -823,7 +827,7 @@
     "first_seen": "2026-08-07",
     "key": "7G2CEHEDXRA049479",
     "last_price": 69373,
-    "last_seen": "2026-08-08",
+    "last_seen": "2026-08-09",
     "lowest_price": 69373,
     "price_history": [
       {
@@ -841,7 +845,7 @@
     "first_seen": "2026-06-20",
     "key": "7G2CEHEDXSA077403",
     "last_price": 64900,
-    "last_seen": "2026-08-08",
+    "last_seen": "2026-08-09",
     "lowest_price": 64900,
     "price_history": [
       {
@@ -859,7 +863,7 @@
     "first_seen": "2026-07-18",
     "key": "7G2CEHEE0RA033140",
     "last_price": 67999,
-    "last_seen": "2026-08-08",
+    "last_seen": "2026-08-09",
     "lowest_price": 67999,
     "price_history": [
       {
